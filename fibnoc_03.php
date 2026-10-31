@@ -6,34 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST">
-        <input type="numebr" name="n1">
-        <input type="submit" name="Submit">
-    </form>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $n = $_POST["n1"];
-        $a = 0;
-        $b = 1;
-        for ($i = 0; $a <= $n; $i++) {
-            echo $a . "";
-            $c = $a + $b;
-            $a = $b;
-            $b = $c;
-        }
+<form method="POST">
+    <input type="number" name="n1">
+    <input type="submit" value="sub">
+
+
+</form>
+<?php
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
+{
+
+$num=$_POST["n1"];
+$a=0;
+$b=1;
+
+for($i=0;$a<$num;$i++)
+    {
+
+        echo $a."";
+        $c=$a+$b;
+        $a=$b;
+        $b=$x;
+
+
+
+    }
+
+}
+
+
+
+?>
+
+
+
     
-        }
-
-
-
-
-
-
-
-
-
-
-
-    ?>
 </body>
 </html>

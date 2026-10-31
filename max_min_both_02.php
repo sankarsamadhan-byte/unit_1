@@ -1,94 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Maximum Number</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<form method="POST">
-    Enter First Number:
-    <input type="number" name="n1"><br><br>
-
-    Enter Second Number:
-    <input type="number" name="n2"><br><br>
-
-    <input type="submit" value="Find Maximum">
+    <form method="post">
+        <input type="number" name="n1">
+        <input type="number" name="n2">
+    <input type="submit" value="submit">
 </form>
-<?php
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-    $n1 = $_POST['n1'];
-    $n2 = $_POST['n2'];
 
-    if($n1 > $n2)
+<?php
+
+if($_SERVER["REQUEST_METHOD"]=="POST")
     {
-        echo "Maximum Number = $n1";
+
+        $n1=$_POST["n1"];
+        $n2=$_POST["n2"];
+
+            if($n1>$n2)
+                {
+                    echo "max  vlaue is  $n1";
+                    echo "min vlaue $n2";
+                }
+            elseif($n1<$n2)
+                {
+                    echo "Max i  $n2";
+                    echo "min vlaue $n1";
+
+                }
+                else
+                    {
+                        echo "both are  smae ";
+                    }
+
+
     }
-    elseif($n2 > $n1)
-    {
-        echo "Maximum Number = $n2";
-    }
-    else
-    {
-        echo "Both numbers are equal.";
-    }
-}
+
+
 
 ?>
+
 
 </body>
 </html>
-
-
-
-
-<!-- 
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Maximum and Minimum Number</title>
-</head>
-<body>
-
-<form method="POST">
-
-    Enter First Number:
-    <input type="number" name="n1"><br><br>
-
-    Enter Second Number:
-    <input type="number" name="n2"><br><br>
-
-    <input type="submit" value="Find">
-
-</form>
-
-<?php
-
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-    $n1 = $_POST['n1'];
-    $n2 = $_POST['n2'];
-
-    if($n1 > $n2)
-    {
-        echo "Maximum Number = $n1 <br>";
-        echo "Minimum Number = $n2";
-    }
-    elseif($n2 > $n1)
-    {
-        echo "Maximum Number = $n2 <br>";
-        echo "Minimum Number = $n1";
-    }
-    else
-    {
-        echo "Both numbers are equal.";
-    }
-}
-
-?>
-
-</body>
-</html> -->
